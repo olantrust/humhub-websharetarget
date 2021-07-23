@@ -12,7 +12,7 @@ class Module extends \humhub\components\Module
     */
     public function getConfigUrl()
     {
-        return Url::to(['/websharetarget/admin']);
+        return Url::to(['/websharetarget/manifest']);
     }
 
     /**
