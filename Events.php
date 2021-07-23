@@ -113,30 +113,30 @@ class Events
             'short_name' => 'Messages',
             'description' => Yii::$app->name . ' messaging app',
             'url' => Url::toRoute(['/mail/mail/index', ['source' => 'pwa']], true),
-            'icons' => [
+            'icons' => [[
               'src' => Url::toRoute('/', true) . 'olan-net-chat-192.png',
               'sizes' => '192x192'
-            ]
+            ]]
           ],
           [
             'name' => 'Tasks',
             'short_name' => 'Tasks',
             'description' => 'Overview of my tasks',
             'url' => Url::toRoute(['/tasks/global', ['source' => 'pwa']], true),
-            'icons' => [
+            'icons' => [[
               'src' => Url::toRoute('/', true) . 'olan-net-tasks-192.png',
               'sizes' => '192x192'
-            ]
+            ]]
           ],
           [
             'name' => 'Calendar',
             'short_name' => 'Calendar',
             'description' => 'Overview calendar',
             'url' => Url::toRoute(['/calendar/global', ['source' => 'pwa']],true),
-            'icons' => [
+            'icons' => [[
               'src' => Url::toRoute('/',true) . 'olan-net-calendar-192.png',
               'sizes' => '192x192'
-            ]
+            ]]
           ]
         ]),
         'screenshots' => [
