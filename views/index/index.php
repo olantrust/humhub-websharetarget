@@ -10,6 +10,7 @@ use humhub\widgets\Button;
 use humhub\widgets\FooterMenu;
 use humhub\widgets\SiteLogo;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $title = 'Share';
 $this->setPageTitle($title);
@@ -20,13 +21,17 @@ $this->setPageTitle($title);
 $this->registerCss('
 #topbar-first, #topbar-second {display:none}
 body {padding-top:50px !important}
+.img-logo-webshare {width:138px;}
+@media(max-width:992px) {
+    .img-logo-webshare {width:80px;}
+}
 ');
 
 ?>
 <div class="panel panel-default" style="text-align:left">
     <div class="panel-heading" style="padding:0">
         <?php if (LogoImage::hasImage()) : ?>
-            <img class="img-rounded" src="<?= LogoImage::getUrl(128, 80); ?>" alt="<?= Html::encode(Yii::$app->name) ?>" id="img-logo" style="padding:5px;margin:10px" />
+            <img class="img-rounded img-logo-webshare" src="<?= Url::base() . "/themes/Olan/img/logo/logo.svg" ?>" alt="<?= Html::encode(Yii::$app->name) ?>" id="img-logo" style="padding:5px;margin:10px" />
             &nbsp;
         <?php else: ?><div class="no-logo"><?= Html::encode(Yii::$app->name) ?></div><?php endif; ?><?= $title ?> On <?= Yii::$app->name ?>
     </div>
